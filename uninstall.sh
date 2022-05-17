@@ -33,4 +33,4 @@ if [[ $(sudo tail -1 /etc/sudoers | grep -w PERSONALIZADO) != "" ]]; then
     done
 fi
 
-# Ya solo queda eliminar manualmente los atajos de teclado crados para este programa.
+# Ya solo falta eliminar manualmente los atajos de teclado crados para este programa.

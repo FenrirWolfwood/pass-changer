@@ -38,7 +38,7 @@ else
 fi
 
 
-# Ya solo falta añadir los atajos de teclado con el siguiente comando:
+# Ya solo falta añadir manualmente los atajos de teclado con el siguiente comando:
 #
 #   sudo /opt/pass-changer/pass-changer.sh USUARIO NUM-CLAVE
 #
