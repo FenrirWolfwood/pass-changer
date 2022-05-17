@@ -5,11 +5,11 @@ Programa de cambio rápido de claves para el usuario.
 
 ## install.sh
 Que hace:
-- Realiza BackUp del fichero de claves _/etc/shadow_ a _/etc/shadow.bak_ por si hay algún problema.
+- Realiza BackUp del fichero de claves _/etc/shadow_ a _/etc/shadow.bak_ por si hubiera algún problema.
 - Copia los ficheros del programa en _/opt/pass-changer_.
 - Añade a _/etc/sudoers_ la excepción para que no pida clave de SUDO con este script.
 
-Ya solo falta añadir los atajos de teclado con el siguiente comando:
+Ya solo falta añadir manualmente los atajos de teclado con el siguiente comando:
 
     sudo /opt/pass-changer/pass-changer.sh USUARIO NUM-CLAVE
 
@@ -27,3 +27,13 @@ Elemplo: `sudo /opt/pass-changer.sh $USER 1`
 Al asignarlo a un atajo de teclado, para que no pida contraseña de sudo, es necesario añadir la siguiente línea al fichero /etc/sudoers :
 
     %sudo    ALL=NOPASSWD: /opt/pass-changer.sh
+
+<br/>
+
+## uninstall.sh
+Que hace:
+- Borra el directorio _/opt/pass-changer_ y su contenido.
+- Conserva el BackUp del fichero de claves (_/etc/shadow.bak_) por si hubiera algún problema.
+- Borra el registro del programa en _/etc/sudoers_.
+
+Ya solo falta eliminar manualmente los atajos de teclado creados para este programa.
