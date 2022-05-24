@@ -41,7 +41,7 @@ fi
 if [[ $(sudo tail -1 /etc/sudoers | grep -w PERSONALIZADO) != "" ]]; then
     linea=$(sudo sed -n "/PERSONALIZADO/=" /etc/sudoers)
     linea=$(($linea - 3))
-    
+
     for i in 1 2 3 4; do
         sudo sed -i "$linea d" /etc/sudoers
     done
